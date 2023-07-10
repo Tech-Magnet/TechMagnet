@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+body{
+    background-color: #ffffff;
+    font-family: 'Roboto', sans-serif;
+    margin: 0px;
+}
+hr{
+    height: 2px;
+    width: 100%;
+    background-color: #005ea6;
+    border: 0px;
+}
+a{
+    text-decoration: none;
+    color: #000000;
+}
+.footer{
+    background-color: #0065b3;
+    color: #ffffff;
+    height: 330px;
+}
+ul.nav{
+    padding-left: 0px;
+    text-align: center;
+}
+ul{
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+    color: #0065b3;
+}
+ul.nav > li {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 25px;
+    vertical-align: 35px;
+    border-radius: 15px;
+    color:#0065b3;
+}
+ul.nav > li:hover{
+    background-color: #c9c9c9;
+    animation: menuSizeUp 0.5s;
+    font-size: 28px;
+}
+ul.t-list{
+    font-size: 23px;
+    color: #141414;
+    list-style-type: "\2705";
+}
+
+/*columns*/
+* {
+    box-sizing: border-box;
+  }
+/* Create three equal columns that floats next to each other */
+.column {
+    float: left;
+    width: 16%;
+    padding: 10px;
+  }  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-DDL80MLZP9"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-DDL80MLZP9');
+  </script>
+  <title>Cart</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="pics/OfficialLogoOnly.png">
+  <script type="text/javascript" src="main.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+</head>
+<body onload="addItem()">
+
+  <h1 style="padding-left: 10px; font-size: 40px;">CART</h1>
+
+  <div style="background-color: #d1c2c2; display: none; position:fixed; left:20vw; border-radius: 25px; padding: 3%; padding-top: 0%;" id="InfoForm">
+
+    <h1>CHECKOUT</h1>
+    <br>
+    <h1 style="font-size: 25px;">E-Mail</h1>
+    <input id="coustomerMail" style="font-size: 35px; border-radius: 10px; width: 50vw;" placeholder="your.name@examble.com" required></input>
+    <h1 style="font-size: 25px;">Telefon Nummer (Valfritt)</h1>
+    <input id="coustomerPhone" style="font-size: 35px; border-radius: 10px; width: 50vw;" placeholder="070-123 45 67" required></input>
+    <h1 style="font-size: 25px;">Namn</h1>
+    <input id="coustomerName" style="font-size: 35px; border-radius: 10px; margin-bottom: 10px; width: 50vw;" placeholder="John Andersson" required></input><br>
+    <h1 style="font-size: 25px;">Address</h1>
+    <input id="coustomerAddress1" style="font-size: 35px; border-radius: 10px; margin-bottom: 10px; width: 50vw;" placeholder="Examble Road" required></input><br>
+    <input id="coustomerAddress2" style="font-size: 35px; border-radius: 10px; margin-bottom: 10px; width: 50vw;" placeholder="Postnummer" required></input><br>
+    <input id="coustomerAddress3" style="font-size: 35px; border-radius: 10px; margin-bottom: 20px; width: 50vw;" placeholder="Postort" required></input><br>
+    <div class="row">
+      <div class="column">
+        <button style="background-color: #9acd32; font-size: 30px;" onclick="send();">Skicka</button>
+      </div>
+      <div class="column">
+        <button style="background-color: #ffffff; font-size: 30px;" onclick="send();">Avbryt</button>
+      </div>
+    </div>
+
+  </div>
+
+  <div id="myList">
+  </div>
+
+  <hr>
+  <br>
+  <div class="row">
+    <div class="column">
+      <h3>Att Betala: <span id="cart-total"></span> kr</h3>
+    </div>
+    <div class="column">
+      <button style="background-color: #9acd32;" onclick="document.getElementById('InfoForm').style.display = 'inline-block'"><h3>Betala</h3></button>
+    </div>
+    <div class="column">
+      <button style="background-color: #ffffff;" onclick="sessionStorage.clear(); window.location.reload();"><h3>T&oumlm Korgen</h3></button>
+    </div>
+  </div>
+
+<!--footer-->
+<div class="footer">
+  <center>
+    <hr>
+    <h3>Ring oss eller maila oss f&oumlr b&aumlsta service</h3>
+    <h3><a style="color:#ffffff; font-size: 20px;" href="tel:+46723150770">072-315 07 70</a> / <a style="color:#ffffff; font-size: 20px;" href="mailto:tech.magnet.org@gmail.com">tech.magnet.org@gmail.com</a></h3>
+    <br>
+    <br>
+    <img style="width: 120px" src="pics/OfficialLogoOnly.png">
+    <br>
+    <h5>Copyright&copy <span id="f-year"></span> Tech Magnet</h5>
+</center>
+</div>
+</body>
+</html>
