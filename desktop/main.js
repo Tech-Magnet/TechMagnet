@@ -102,20 +102,23 @@ function addItem() {
 
         var order = "A New Order has come in \n \nPRICE: " + TOTAL_PRICE + ", \nEmail: " + document.getElementById('coustomerMail').value + ", \nPhone: " + Phone + ", \nName: " + document.getElementById('coustomerName').value + " , \nAddress: " + document.getElementById('coustomerAddress1').value + ", \nZip Code: " + document.getElementById('coustomerAddress2').value + ", \nCity: " + document.getElementById('coustomerAddress3').value + "\n \nProduct Name: " + NAME + "\nProcukt ID: " + PRO + "\nQuantity: " + QTY + "\nPRICE: " + PRICE;
 
-        console.log(order);
+        //console.log(order);
 
 
-
-      const request = new XMLHttpRequest();
-      request.open("POST", "https://discord.com/api/webhooks/1116417872856625223/LFnjS4miUXWf49z87q2TfVYEUNxxP_eHkUT999yHFwZ3KjHqMHWvpb1d9daa4W1Y_7KU");
-
-      request.setRequestHeader('Content-type', 'application/json');
-
-      const params = {
-        username: "Online Orders",
-        avatar_url: "",
-        content: order
-      }
-
-      request.send(JSON.stringify(params));
+        if(document.getElementById('coustomerMail').value == "" || document.getElementById('coustomerName').value == "" || document.getElementById('coustomerAddress1').value == "" || document.getElementById('coustomerAddress2').value == "" || document.getElementById('coustomerAddress3').value == "" || TOTAL_PRICE == 0){
+            alert("Något gick fel, Se till att alla nödvändiga fält");
+        }else{
+            const request = new XMLHttpRequest();
+            request.open("POST", "https://discord.com/api/webhooks/1116417872856625223/LFnjS4miUXWf49z87q2TfVYEUNxxP_eHkUT999yHFwZ3KjHqMHWvpb1d9daa4W1Y_7KU");
+      
+            request.setRequestHeader('Content-type', 'application/json');
+      
+            const params = {
+              username: "Online Orders",
+              avatar_url: "",
+              content: order
+            }
+      
+            request.send(JSON.stringify(params));
+        }
   }
