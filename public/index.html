@@ -1,21 +1,35 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-D2FC5ENEQP"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-D2FC5ENEQP');
-</script>
-  <script>
-    
-    if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
-      window.location.href = "mobile/index.html";
-    }else{
-      window.location.href = "desktop/index.html";
-    }
-    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Getting Started</title>
+    <script type="module" src="/index.js"></script>
 </head>
+<body>
+    <input id="txtEmail" placeholder="test@example.com">
+    <input id="txtPassword" placeholder="test123">
+    <button id="btnLogin"></button>
+
+
+
+
+    <div id="g_id_onload"
+        data-client_id="614054724902-p08hocueqa9ib78o9qu0a879u5pjn2ou.apps.googleusercontent.com"
+        data-context="signin"
+        data-ux_mode="popup"
+        data-login_uri="https://techmagnet.se"
+        data-auto_select="true"
+        data-itp_support="true">
+    </div>
+
+    <div class="g_id_signin"
+        data-type="standard"
+        data-shape="rectangular"
+        data-theme="outline"
+        data-text="signin_with"
+        data-size="large"
+        data-logo_alignment="left">
+</div>
+</body>
 </html>
