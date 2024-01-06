@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+*{
+    font-family: 'Roboto', sans-serif;
+}
+
+.MainTitle{
+    font-size: 50px;
+    cursor: pointer;
+}
+
+.title{
+    font-size: 50px;
+}
+
+ul.nav{
+    display: flex;
+    column-gap: 2rem;
+    align-items: center;
+    justify-content: center;
+}
+
+ul.nav > li{
+    list-style: none;
+    
+}
+
+ul.nav > li > a { 
+    font-size: 25px;
+    text-decoration: none;
+    border: 3px;
+    color: #000000;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+ul.nav > li > a:hover { 
+    background-color: #afaeae;
+}
