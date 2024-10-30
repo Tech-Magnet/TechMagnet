@@ -55,25 +55,10 @@
 }
 
 .product:hover > button {
+    cursor: pointer;
     animation: fadeIn-btn 0.5s;
     opacity: 1;
 }
-
-/*.addToCart-btn{
-    position: relative;
-    bottom: 370px;
-    width: 150px;
-    height: 100px;
-    font-size: 25px;
-    background-color: rgba(227, 0, 143, 0.57);
-    border-style: solid;
-    border-color: #e3008f;
-    border-width: 10px;
-    border-radius: 10px;
-    color: white;
-    display: none;
-}*/
-
 
 .product {
     position: relative;
